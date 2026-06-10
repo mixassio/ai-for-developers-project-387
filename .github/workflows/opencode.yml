@@ -30,4 +30,4 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
-          model: anthropic/claude-fable-5
+          model: openai/gpt-4o
