@@ -1,0 +1,24 @@
+node_modules
+dist
+dist-ssr
+*.local
+
+# Локальные переменные окружения
+.env
+.env.*
+!.env.example
+
+# Генерируется из ../tsp-output/openapi.yaml через `npm run gen:api`
+src/api/schema.d.ts
+
+# Playwright (E2E)
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Логи / editor / OS
+*.log
+.DS_Store
+.idea
+.vscode

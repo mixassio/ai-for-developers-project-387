@@ -1,0 +1,21 @@
+{
+  "name": "calendar-of-calls-spec",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TypeSpec API contract for the Calendar of Calls booking service",
+  "type": "module",
+  "scripts": {
+    "compile": "tsp compile specs",
+    "watch": "tsp compile specs --watch",
+    "format": "tsp format \"specs/**/*.tsp\"",
+    "docs": "npm run compile && npx --yes http-server . -p 8080 -o /specs/docs.html",
+    "docs:redoc": "npm run compile && npx --yes @redocly/cli preview-docs tsp-output/openapi.yaml"
+  },
+  "devDependencies": {
+    "@typespec/compiler": "^0.67.0",
+    "@typespec/http": "^0.67.0",
+    "@typespec/openapi": "^0.67.0",
+    "@typespec/openapi3": "^0.67.0",
+    "@typespec/rest": "^0.67.0"
+  }
+}

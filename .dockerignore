@@ -1,0 +1,27 @@
+# Зависимости и сборки — ставятся/собираются внутри образа.
+**/node_modules
+**/dist
+**/dist-ssr
+tsp-output
+
+# Локальные переменные окружения не попадают в образ.
+# Важно: frontend/.env содержит VITE_API_URL=localhost — он НЕ должен
+# «зашиваться» в сборку, иначе клиент пойдёт не на тот origin.
+**/.env
+**/.env.*
+!**/.env.example
+
+# E2E-артефакты и кэши.
+**/test-results
+**/playwright-report
+**/blob-report
+**/playwright/.cache
+**/*.tsbuildinfo
+
+# VCS / editor / OS / логи.
+.git
+.github
+.idea
+.vscode
+**/.DS_Store
+**/*.log
